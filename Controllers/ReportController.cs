@@ -98,7 +98,7 @@ namespace Esercizio.Controllers
                             Cognome = reader["Cognome"].ToString(),
                             Nome = reader["Nome"].ToString(),
                             DataViolazione = Convert.ToDateTime(reader["DataViolazione"]),
-                            Importo = Convert.ToDecimal(reader["Importo"])
+                            Importo = Math.Round(Convert.ToDecimal(reader["Importo"]), 2)
 
                         };
                         violazioni.Add(violazione);
@@ -129,7 +129,7 @@ namespace Esercizio.Controllers
                     {
                         var violazione = new ViolazioniSuperiori400
                         {
-                            Importo = Convert.ToDecimal(reader["Importo"]),
+                            Importo = Math.Round(Convert.ToDecimal(reader["Importo"]), 2),
                             Cognome = reader["Cognome"].ToString(),
                             Nome = reader["Nome"].ToString(),
                             DataViolazione = Convert.ToDateTime(reader["DataViolazione"]),

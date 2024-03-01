@@ -31,7 +31,10 @@ namespace Esercizio.Controllers
                         verbale.IndirizzoViolazione = reader["IndirizzoViolazione"].ToString();
                         verbale.NominativoAgente = reader["NominativoAgente"].ToString();
                         verbale.DataTrascrizioneVerbale = (DateTime)reader["DataTrascrizioneVerbale"];
-                        verbale.Importo = Convert.ToDecimal(reader["Importo"]);
+
+                        decimal importo = Convert.ToDecimal(reader["Importo"]);
+                        verbale.Importo = Math.Round(importo, 2);
+
                         verbale.DecurtamentoPunti = Convert.ToInt32(reader["DecurtamentoPunti"]);
                         verbale.IDanagrafica = (int)reader["IDanagrafica"];
                         verbale.IDviolazione = (int)reader["IDviolazione"];
