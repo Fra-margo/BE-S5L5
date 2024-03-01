@@ -31,6 +31,7 @@ CREATE TABLE VERBALE (
 );
 
 ###
+Qui sotto sono presenti le query per popolare le tabelle
 
 INSERT INTO ANAGRAFICA (Cognome, Nome, Città, CAP, CodiceFiscale)
 VALUES ('Bianchi', 'Maria', 'Napoli', '80100', 'BNCMRA01A01F205C'),
