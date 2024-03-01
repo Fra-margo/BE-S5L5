@@ -1,0 +1,99 @@
+﻿@model Verbale
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container-AddV {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: darkblue;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    h2{color:darkblue}
+</style>
+
+<div class="container">
+    <h2 class="mb-4">Aggiungi Verbale</h2>
+    <form method="post" action="/Verbale/Add">
+        <div class="form-group">
+            <label for="DataViolazione">Data Violazione</label>
+            <input type="date" class="form-control" id="DataViolazione" name="DataViolazione">
+        </div>
+
+        <div class="form-group">
+            <label for="IndirizzoViolazione">Indirizzo Violazione</label>
+            <input type="text" class="form-control" id="IndirizzoViolazione" name="IndirizzoViolazione">
+        </div>
+
+        <div class="form-group">
+            <label for="NominativoAgente">Nominativo Agente</label>
+            <input type="text" class="form-control" id="NominativoAgente" name="NominativoAgente">
+        </div>
+
+        <div class="form-group">
+            <label for="DataTrascrizioneVerbale">Data Trascrizione Verbale</label>
+            <input type="date" class="form-control" id="DataTrascrizioneVerbale" name="DataTrascrizioneVerbale">
+        </div>
+
+        <div class="form-group">
+            <label for="Importo">Importo</label>
+            <input type="number" class="form-control" id="Importo" name="Importo">
+        </div>
+
+        <div class="form-group">
+            <label for="DecurtamentoPunti">Decurtamento Punti</label>
+            <input type="number" class="form-control" id="DecurtamentoPunti" name="DecurtamentoPunti">
+        </div>
+
+        <div class="form-group">
+            <label for="Anagrafica">Anagrafica:</label>
+            <select class="form-control" name="IdAnagrafica" id="Anagrafica">
+                <option value="">-- Seleziona Anagrafica --</option>
+                @foreach (var item in ViewBag.Anagrafiche)
+                {
+                    <option value="@item.IDanagrafica">
+                        @item.Nome @item.Cognome
+                    </option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="TipoViolazione">Tipo Violazione:</label>
+            <select class="form-control" name="IDviolazione" id="TipoViolazione">
+                <option value="">-- Seleziona Tipo Violazione --</option>
+                @foreach (var item2 in ViewBag.Violazioni)
+                {
+                    <option value="@item2.IDviolazione">
+                        @item2.Descrizione
+                    </option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salva</button>
+    </form>
+</div>

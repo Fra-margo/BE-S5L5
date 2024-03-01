@@ -1,0 +1,78 @@
+﻿@model Anagrafica
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-addA {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+        color: darkblue;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border-color: darkblue;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+        padding: 10px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    #h2AddA{
+        color: darkblue;
+    }
+</style>
+
+<div class="container-addA">
+    <h2 id="h2AddA">Inserisci nuova Anagrafica</h2>
+    <form action="Add" method="post">
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" />
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" />
+
+        <label for="indirizzo">Indirizzo:</label>
+        <input type="text" id="indirizzo" name="indirizzo" />
+
+        <label for="citta">Città:</label>
+        <input type="text" id="citta" name="citta" />
+
+        <label for="cap">CAP:</label>
+        <input type="text" id="cap" name="cap" />
+
+        <label for="codiceFiscale">Codice Fiscale:</label>
+        <input type="text" id="codiceFiscale" name="codiceFiscale" />
+
+        <input type="submit" value="Salva" />
+    </form>
+</div>

@@ -1,0 +1,39 @@
+﻿@model List<Esercizio.Models.Verbale>
+<style>
+    h2{
+        color: darkblue;
+    }
+    th{
+        color: darkblue;
+    }
+</style>
+<div class="container">
+<h2>Verbali</h2>
+<table class="table">
+    <tr>
+        <th>IDverbale</th>
+        <th>DataViolazione</th>
+        <th>IndirizzoViolazione</th>
+        <th>NominativoAgente</th>
+        <th>DataTrascrizioneVerbale</th>
+        <th>Importo</th>
+        <th>DecurtamentoPunti</th>
+        <th>IDanagrafica</th>
+        <th>IDviolazione</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.IDverbale</td>
+            <td>@item.DataViolazione</td>
+            <td>@item.IndirizzoViolazione</td>
+            <td>@item.NominativoAgente</td>
+            <td>@item.DataTrascrizioneVerbale</td>
+            <td>@item.Importo</td>
+            <td>@item.DecurtamentoPunti</td>
+            <td>@item.IDanagrafica</td>
+            <td>@item.IDviolazione</td>            
+        </tr>
+    }
+</table>
+</div>

@@ -1,0 +1,64 @@
+﻿@model List<ViolazioneOltre10Punti>
+<style>
+    .container-report3{
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    th {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+    h2{
+        color: darkblue;
+    }
+</style>
+<div class="container-report3">
+    <h2 class="mb-4">Violazioni Oltre 10 Punti</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Importo</th>
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Data Violazione</th>
+                <th>Decurtamento Punti</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Importo</td>
+                    <td>@item.Cognome</td>
+                    <td>@item.Nome</td>
+                    <td>@item.DataViolazione</td>
+                    <td>@item.DecurtamentoPunti</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
