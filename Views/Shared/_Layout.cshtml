@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/Esercizio.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Esercizio</a>
@@ -23,7 +24,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVerbali" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Sezione Verbali
+                            Sezione Verbale
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownVerbali">
                             <li><a class="dropdown-item" href="@Url.Action("Add", "Anagrafica")">Inserisci nuova anagrafica</a></li>
