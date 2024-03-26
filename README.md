@@ -1,3 +1,11 @@
+The purpose of the exercise is to recreate a management system for the Municipal Police using ASP.NET MVC and the use of a database.
+The application allows: registering all offenders, having a list of violations that can be contested, and compiling a report.
+Additionally, there are some pages that display the result of certain queries requested by the task.
+
+Lo scopo dell'esercizio è quello di ricreare un gestionale per la Polizia Municipale tramite ASP.NET MVC e l'uso di un database. 
+L'applicazione permette di: anagrafare tutti i trasgressori, avere l'elenco delle violazioni che è possibile contestare e compilare un verbale.
+Inoltre sono presenti alcune pagine che visualizzano il risultato di alcune Query richieste dal compito.
+
 Questo repository contiene le query SQL utilizzate per creare le tabelle nel database "Esercizio be-s2l5".
 ### ANAGRAFICA
 CREATE TABLE ANAGRAFICA (
